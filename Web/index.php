@@ -1,6 +1,11 @@
 <?php 
 session_start();
 require '../Web/init.php';
+if ($_SESSION['username']==NULL)
+	{
+	header("Location: /ttdarbs/index.php");
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +26,7 @@ require '../Web/init.php';
 
 
 <body>
+	<div class="container">
 <div id="header">
 <div class="container">
 <div>
@@ -42,20 +48,20 @@ require '../Web/init.php';
 	 <li class=""><a href="?lang=latvian"><?php echo $lang['latvian'];?></a></li>
 	 <li class=""><a href="?lang=spain"><?php echo $lang['spain'];?></a></li>
 	 <li class=""> <a href="/ttdarbs/logout.php"><?php echo $lang['logout'];?></a></li>
-	
-	 <li class="">
-	 <a href="/ttdarbs/index.php" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success"><?php echo $lang['login'];?></span></a>
-	 <a href="/ttdarbs/register.php" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success"><?php echo $lang['registration'];?></span></a>
-	
-	</div>
-	</li>
+
     </ul>
   </div>
 </div>
 </div>
 
-
-
+<div>
+	<div class="center">
+		<h3>Par mums</h3>
+	<p>Mēs esam uzņēmums, kas piedāvā saviem klientiem telefona lādētājus, kurus ir iespējams uzlādēt ar saules enerģiju. Ir pieejami dažādi lādētāju modeļi ar dažādiem tehniskiem parametriem un dizaina risinājumiem. Viena produkta cenā ir iekļauta arī summa (5 eiro), kas tiek ziedota labdarībai. Pēc pircēja vēlmes šo summu ir iespējams arī palielināt, šajā gadījumā ziedošanai tiek nodota summa, kuru nosaka pats pircējs. Pirkšanas brīdī klientam ir iespēja ne tikai regulēt ziedojuma apjomu, bet arī izvēlēties labdarības projektu, kuram tiks pārskaitīta nauda.
+	</p>
+</div>
+<img src="../images/product.png" class="img-responsive center-block" >
+</div>
 
 
 
@@ -81,7 +87,7 @@ require '../Web/init.php';
 	</div>
 	
 
-	
+	</div>
 
 </body>
 </html>

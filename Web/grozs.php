@@ -20,6 +20,7 @@ require '../Web/init.php';
 
 
 <body>
+	<div class="container">
 <div id="header">
 <div class="container">
 <div>
@@ -42,12 +43,6 @@ require '../Web/init.php';
 	 <li class=""><a href="?lang=spain"><?php echo $lang['spain'];?></a></li>
 	 <li class=""> <a href="/ttdarbs/logout.php"><?php echo $lang['logout'];?></a></li>
 	
-	 <li class="">
-	 <a href="/ttdarbs/index.php" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success"><?php echo $lang['login'];?></span></a>
-	 <a href="/ttdarbs/register.php" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success"><?php echo $lang['registration'];?></span></a>
-	
-	</div>
-	</li>
     </ul>
   </div>
 </div>
@@ -78,7 +73,7 @@ require '../Web/init.php';
 	</div>
 	
 
-	
+	</div>
 
 </body>
 </html>

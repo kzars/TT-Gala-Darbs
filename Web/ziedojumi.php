@@ -21,6 +21,7 @@ require '../Web/init.php';
 
 
 <body>
+	<div class="container">
 <div id="header">
 <div class="container">
 <div>
@@ -42,42 +43,17 @@ require '../Web/init.php';
 	 <li class=""><a href="?lang=latvian"><?php echo $lang['latvian'];?></a></li>
 	 <li class=""><a href="?lang=spain"><?php echo $lang['spain'];?></a></li>
 	 <li class=""> <a href="/ttdarbs/logout.php"><?php echo $lang['logout'];?></a></li>
-	
-	 <li class="">
-	 <a href="/ttdarbs/index.php" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success"><?php echo $lang['login'];?></span></a>
-	 <a href="/ttdarbs/register.php" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success"><?php echo $lang['registration'];?></span></a>
-	
-	</div>
-	</li>
+	 
     </ul>
   </div>
 </div>
 </div>
 </div>
 
-<div>
+<div class="row">
 
-<?php
-	  $query = "SELECT * FROM `charity`";
-	  $result = mysqli_query($con,$query); 
-?>
- <?php
-	  $query = "SELECT * FROM `charity`";
-	  $result = mysqli_query($con,$query); 
-?>
-
-<?php
-	  while ($row = mysqli_fetch_row($result)) { ?>
-				<div class="col-4">
-	  				<h3><?php echo $row[1]; ?></h3>
-	  				<img src="../images/noimagefound.jpg">
-	  					<?php echo $row[2]; ?>
-	  					
-	  			</div>
-	  		<
-<?php } ?>
-
-
+<?php 
+require('ziedo.php'); ?>
 </div>
 	
 
@@ -97,7 +73,7 @@ require '../Web/init.php';
 		<p class="pull-right">&copy; WOCHShop</p>
 	</div>
 	
-
+</div>
 	
 
 </body>
