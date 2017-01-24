@@ -26,27 +26,33 @@ require '../Web/init.php';
 <div class="container">
 <div>
 	<div class="span6"><?php echo $lang['hello'];?><strong> <?php echo $_SESSION['username']; ?> </strong></div> 
-</div>
-
-
-<!-- Navigācija-->
-<div id="logoArea" class="navbar">
-
-  <div>
-    <a class="brand" href="index.php"><img src="/ttdarbs/images/WOCH3.jpg"></a>
-		
-		 
-    <ul id="topMenu" class="nav pull-right">
-	 <li class=""><a href="ziedojumi.php"><?php echo $lang['charity'];?></a></li>
-	 <li class=""><a href="grozs.php"><?php echo $lang['shop'];?></a></li>
+	<div class="navbar">
+	<ul id="topMenu" class="nav pull-right"> 
 	 <li class=""><a href="?lang=english"><?php echo $lang['english'];?></a></li>
 	 <li class=""><a href="?lang=latvian"><?php echo $lang['latvian'];?></a></li>
 	 <li class=""><a href="?lang=spain"><?php echo $lang['spain'];?></a></li>
+	 </ul>
+	 </div>
+</div>
+
+
+<!-- Logo -->
+    <div>
+    <a class="brand" href="index.php"><img src="/ttdarbs/images/WOCH3.jpg"/></a>
+	</div>
+<!-- /Logo -->
+
+
+<!-- Navigācija-->
+	
+	<div id="logoArea" class="navbar">
+	<div>	 
+    <ul id="topMenu" class="nav pull-right">
+	 <li class=""><a href="ziedojumi.php"><?php echo $lang['charity'];?></a></li>
+	 <li class=""><a href="grozs.php"><?php echo $lang['shop'];?></a></li>
 	 <li class=""> <a href="/ttdarbs/logout.php"><?php echo $lang['logout'];?></a></li>
-	 
     </ul>
   </div>
-</div>
 </div>
 </div>
 
@@ -56,6 +62,8 @@ require '../Web/init.php';
 require('ziedo.php'); ?>
 </div>
 	
+	
+
 
 <!-- Apakša -->
 		<div class="container">

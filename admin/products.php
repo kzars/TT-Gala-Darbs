@@ -40,3 +40,5 @@
 	  		</td>
 	  	</tr>
 <?php } $_SESSION['adminwork']="0";?>
+<br><br>
+<a class= "btn btn-info"href="register_product.php">Pievienot produktu</a>

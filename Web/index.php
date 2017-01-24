@@ -1,4 +1,5 @@
 <?php 
+require('../db.php');
 session_start();
 require '../Web/init.php';
 if ($_SESSION['username']==NULL)
@@ -19,6 +20,7 @@ if ($_SESSION['username']==NULL)
 	
 <!-- Bootstrap style --> 
     <link id="callCss" rel="stylesheet" href="themes/WOCHShop/bootstrap.min.css" media="screen"/>
+	<link id="callCss" rel="stylesheet" href="themes/WOCHShop/bootstrap-responsive.min.css" media="screen"/>
 
   </head>
 <!-- Galvas beigas-->
@@ -31,36 +33,48 @@ if ($_SESSION['username']==NULL)
 <div class="container">
 <div>
 	<div class="span6"><?php echo $lang['hello'];?><strong> <?php echo $_SESSION['username']; ?> </strong></div> 
-</div>
-
-
-<!-- Navigācija-->
-<div id="logoArea" class="navbar">
-
-  <div>
-    <a class="brand" href="index.php"><img src="/ttdarbs/images/WOCH3.jpg"/></a>
-		
-		 
-    <ul id="topMenu" class="nav pull-right">
-	 <li class=""><a href="ziedojumi.php"><?php echo $lang['charity'];?></a></li>
-	 <li class=""><a href="grozs.php"><?php echo $lang['shop'];?></a></li>
+	<div class="navbar">
+	<ul id="topMenu" class="nav pull-right"> 
 	 <li class=""><a href="?lang=english"><?php echo $lang['english'];?></a></li>
 	 <li class=""><a href="?lang=latvian"><?php echo $lang['latvian'];?></a></li>
 	 <li class=""><a href="?lang=spain"><?php echo $lang['spain'];?></a></li>
-	 <li class=""> <a href="/ttdarbs/logout.php"><?php echo $lang['logout'];?></a></li>
+	 </ul>
+	 </div>
+</div>
 
+
+<!-- Logo -->
+    <div>
+    <a class="brand" href="index.php"><img src="/ttdarbs/images/WOCH3.jpg"/></a>
+	</div>
+<!-- /Logo -->
+
+
+<!-- Navigācija-->
+	
+	<div id="logoArea" class="navbar">
+	<div>	 
+    <ul id="topMenu" class="nav pull-right">
+	 <li class=""><a href="ziedojumi.php"><?php echo $lang['charity'];?></a></li>
+	 <li class=""><a href="grozs.php"><?php echo $lang['shop'];?></a></li>
+	 <li class=""> <a href="/ttdarbs/logout.php"><?php echo $lang['logout'];?></a></li>
     </ul>
   </div>
 </div>
 </div>
 
+
+
 <div>
 	<div class="center">
-		<h3>Par mums</h3>
-	<p>Mēs esam uzņēmums, kas piedāvā saviem klientiem telefona lādētājus, kurus ir iespējams uzlādēt ar saules enerģiju. Ir pieejami dažādi lādētāju modeļi ar dažādiem tehniskiem parametriem un dizaina risinājumiem. Viena produkta cenā ir iekļauta arī summa (5 eiro), kas tiek ziedota labdarībai. Pēc pircēja vēlmes šo summu ir iespējams arī palielināt, šajā gadījumā ziedošanai tiek nodota summa, kuru nosaka pats pircējs. Pirkšanas brīdī klientam ir iespēja ne tikai regulēt ziedojuma apjomu, bet arī izvēlēties labdarības projektu, kuram tiks pārskaitīta nauda.
+		<h3><?php echo $lang['about'];?></h3>
+	<p><?php echo $lang['text'];?>
 	</p>
 </div>
 <img src="../images/product.png" class="img-responsive center-block" >
+
+
+
 </div>
 
 
